@@ -1,5 +1,5 @@
-import React, { PropsWithChildren } from "react";
-import { StyleProp, StyleSheet, View, ViewStyle } from "react-native";
+import React, { PropsWithChildren } from "react"
+import { StyleProp, StyleSheet, View, ViewStyle } from "react-native"
 
 type Props = PropsWithChildren<{
     style?: StyleProp<ViewStyle>,
@@ -18,5 +18,13 @@ export const GlaringSegment: React.FC<Props> = ({ children, style, contentStyle 
 
 const styles = StyleSheet.create({
     segmentContainer: {},
-    segment: {},
+    segment: {
+        zIndex: 1,
+        paddingHorizontal:12,
+        paddingVertical: 36,
+        borderWidth: 6,
+        borderColor: '#282828',
+        borderRadius: 12,
+        backgroundColor: '#303030',
+    },
 })
