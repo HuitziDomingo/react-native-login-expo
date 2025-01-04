@@ -8,11 +8,8 @@ type Props = PropsWithChildren<{
 
 export const GlaringSegment: React.FC<Props> = ({ children, style, contentStyle }) => {
     return (
-        <View style={[styles.segment, style]}>
-            <View style={[styles.segmentContainer, contentStyle]}>
-                {children}
-            </View>
-            {/* Design de los elementos de colores */}
+        <View style={[styles.segmentContainer, style]}>
+            <View style={[styles.segment, contentStyle]}>{children}</View>
             <View style={styles.footer}>
                 <View style={[styles.bloom, styles.bloomBlue]} />
                 <View style={[styles.bloom, styles.bloomPink]} />
@@ -85,5 +82,5 @@ const styles = StyleSheet.create({
       0 0px 30px 4px hsl(271 91% 65%)
     `,
     },
-    
+
 })
